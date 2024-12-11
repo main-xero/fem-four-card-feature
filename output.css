@@ -54,10 +54,9 @@ body .main-content section.parent .card p {
   color: hsl(229, 6%, 66%);
   font-size: 14px;
 }
-body .main-content section.parent .card img {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+body .main-content section.parent .card .img-container {
+  padding-top: 36px;
+  text-align: end;
 }
 body .main-content section.parent #card_1 {
   border-top: 0.2rem solid hsl(180, 62%, 55%);
