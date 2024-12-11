@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins, sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  width: 100%;
+  height: 100vh;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: hsl(234, 12%, 34%);
+  width: 540px;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+body header .heading h1 {
+  font-weight: 300;
+  margin-bottom: -0.8rem;
+}
+body header .heading h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+body section.parent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+body section.parent .card {
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  width: 350px;
+  height: 250px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+body section.parent .card p {
+  color: hsl(229, 6%, 66%);
+  font-size: 14px;
+}
+body section.parent .card:nth-child(1) {
+  margin-bottom: 1.5rem;
+}
+body section.parent #card_1 {
+  border-top: 0.2rem solid hsl(180, 62%, 55%);
+}
+body section.parent #card_2 {
+  border-top: 0.2rem solid hsl(0, 78%, 62%);
+}
+body section.parent #card_3 {
+  border-top: 0.2rem solid hsl(34, 97%, 64%);
+}
+body section.parent #card_4 {
+  border-top: 0.2rem solid hsl(212, 86%, 64%);
+}
+
+@media only screen and (max-width: 1110px) {
+  body {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  body header {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 3.5rem;
+    text-align: center;
+  }
+  body section.parent {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 3rem;
+  }
+  body section.parent .card {
+    width: 400px;
+  }
+  body section.parent .card:nth-child(1) {
+    margin-top: -1.5rem;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
