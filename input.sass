@@ -32,80 +32,80 @@ body
     width: 100%
     margin: 2rem 0
 
-    header
-        display: flex
-        flex-direction: column
-        align-items: center
-        color: $Dark-Blue
-        width: 540px
-        padding-bottom: 3rem
-        text-align: center
-
-        .heading h1
-            font-weight: 300
-            margin-bottom: -0.8rem
-
-        .heading h2
-            font-size: 2rem
-            padding-bottom: 1rem
-
-    section.parent 
-        display: flex
-        align-items: center
-        gap: 1.5rem
-        
-        .card
-            position: relative
-            border-radius: .8rem
-            padding: 1.5rem
-            width: 350px
-            height: 250px
-            background-color: $Light-Gray
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
-
-            p
-                color: $Gray-Blue
-                font-size: 14px
-
-            img
-                position: absolute
-                bottom: 1.5rem
-                right: 1.5rem
-
-        .card:nth-child(1)
-            margin-bottom: 1.5rem
-
-        #card_1
-            border-top: 0.2rem solid $Cyan
-        
-        #card_2
-            border-top: 0.2rem solid $Red
-
-        #card_3
-            border-top: 0.2rem solid $Orange
-        
-        #card_4
-            border-top: 0.2rem solid $Blue
-
-@media only screen and (max-width: 1000px)
-
-    body 
-        display: block
-        margin-bottom: 2rem
+    .main-content
+        max-width: 1120px
 
         header
-            width: 400px
-            margin: 0 auto
-            padding-top: 3.5rem
+            color: $Dark-Blue
+            padding-bottom: 3rem
             text-align: center
 
+            .heading h1
+                font-weight: 300
+                margin-bottom: -0.8rem
+
+            .heading h2
+                font-size: 2rem
+                padding-bottom: 1rem
+            .description
+                max-width: 540px
+                margin: 0 auto
         section.parent
-            display: flex
-            flex-direction: column
-            padding: 2rem 0 3rem
+            display: grid
+            align-items: center
+            gap: 1.5rem
+            grid-template-columns: repeat(3,1fr)
+            grid-template-areas: "c1 c2 c4" "c1 c3 c4"
 
             .card
-                width: 400px
+                position: relative
+                border-radius: .8rem
+                padding: 1.5rem
+                max-width: 350px
+                min-height: 220px
+                background-color: $Light-Gray
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
 
-            .card:nth-child(1)
-                margin-top: -1.5rem
+                p
+                    color: $Gray-Blue
+                    font-size: 14px
+
+                img
+                    position: absolute
+                    bottom: 1.5rem
+                    right: 1.5rem
+
+            #card_1
+                border-top: 0.2rem solid $Cyan
+                grid-area: c1
+
+            #card_2
+                border-top: 0.2rem solid $Red
+                grid-area: c2
+
+            #card_3
+                border-top: 0.2rem solid $Orange
+                grid-area: c3
+
+            #card_4
+                border-top: 0.2rem solid $Blue
+                grid-area: c4
+
+@media only screen and (max-width: 1000px)
+    body
+        .main-content
+            display: block
+            margin-bottom: 2rem
+
+            header
+                width: 400px
+                margin: 0 auto
+                padding-top: 3.5rem
+                text-align: center
+
+            section.parent
+                display: grid
+                grid-template-columns: 1fr
+                padding: 2rem 0 3rem
+                grid-template-areas: "c1" "c2" "c3" "c4"
+                justify-items: center
